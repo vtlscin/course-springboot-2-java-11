@@ -2,9 +2,17 @@ package com.example.course.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity //Indica que a classe vai ser mapeada para o BD
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
+	@Id //indica que esse campo é a chave primaria
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // indica que o valor é auto incrementado
 	private Long id;
 	private String name;
 	private String email;
