@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import com.example.course.entities.Order;
 import com.example.course.entities.Product;
 
-@Embeddable
+@Embeddable// Classe auxiliar para chave primaria
 public class OrderItemPK implements Serializable{
 
 	private static final long serialVersionUID = 1L;
